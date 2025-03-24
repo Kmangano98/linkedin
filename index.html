@@ -3,178 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karla Mangano - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Karla Mangano - Professional Portfolio</title>
     <style>
-        /* Base Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #E8E3D9; /* Soft Neutral Sand */
-            color: #2C3E50; /* Deep Slate Blue */
-            line-height: 1.6;
+            background-color: #f5f7fa;
+            color: #2a2f36;
+            line-height: 1.7;
         }
         header {
-            background-color: #335C67; /* Rich Deep Teal */
+            background-color: #2f3e46;
             padding: 20px 0;
             position: sticky;
             top: 0;
             width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
             z-index: 1000;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+            list-style: none;
             display: flex;
             justify-content: center;
+            margin: 0;
+            padding: 0;
         }
         nav ul li {
             margin: 0 15px;
         }
         nav ul li a {
-            color: #F4D06F; /* Warm Golden Yellow */
+            color: #ffffff;
             text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
+            font-weight: 600;
             transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #FF6B6B; /* Coral Accent */
+            color: #4c9aff;
         }
         section {
-            padding: 60px 20px;
+            padding: 50px 25px;
+            max-width: 800px;
             margin: 40px auto;
-            width: 80%;
-            background: #F9F5F0; /* Light Sand for Sections */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
         }
         h1, h2 {
-            color: #335C67; /* Deep Teal for Titles */
+            color: #2f3e46;
+            border-bottom: 2px solid #ccd5df;
+            padding-bottom: 5px;
         }
         .profile-pic {
-            width: 200px;
+            width: 180px;
             border-radius: 50%;
-            margin-top: 20px;
-            border: 5px solid #1E88E5; /* Bright Blue */
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
+            border: 3px solid #2f3e46;
+            margin: 20px auto;
+            display: block;
         }
         a {
-            color: #1E88E5; /* Bright Blue */
+            color: #4c9aff;
             text-decoration: none;
-            transition: color 0.3s;
         }
         a:hover {
-            color: #FF6B6B; /* Coral Accent */
+            text-decoration: underline;
         }
         .highlight-box {
-            background-color: #FFEBB7; /* Light Warm Gold */
+            background-color: #e8eff6;
             padding: 15px;
-            border-radius: 10px;
+            border-radius: 6px;
             text-align: center;
             margin: 20px auto;
-            width: 70%;
-            border-left: 5px solid #FF6B6B; /* Coral Accent */
+            width: 80%;
+            border-left: 4px solid #4c9aff;
         }
-        /* Responsive Design */
+        ul {
+            padding-left: 20px;
+        }
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
+                align-items: center;
             }
             section {
-                width: 95%;
+                width: 90%;
             }
         }
     </style>
-</head>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Professional Experience</a></li>
-                <li><a href="#skills">Technical Skills</a></li>
-                <li><a href="#research">Research & Internships</a></li>
-                <li><a href="#projects">Projects & Achievements</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#languages">Languages</a></li>
                 <li><a href="#publications">Publications</a></li>
             </ul>
         </nav>
     </header>
-    
-     <section id="about">
-        <h1>Karla Mangano </h1>
+
+    <section id="about">
+        <h1>Karla Mangano</h1>
         <img src="profile.jpg" alt="Karla Mangano" class="profile-pic">
-        <p class="highlight-box">Born in 🇩🇪 Munich, raised in 🇦🇺 Perth.
-        <p>Master's student in Medical Biology with expertise in <strong>bioinformatics, data science, and computational biology</strong>. Passionate about leveraging <strong>machine learning and statistical modeling</strong> to advance biomedical research.</p>
+        <p class="highlight-box">Master's student in Medical Biology specializing in <strong>bioinformatics, data science, and computational biology</strong>. Focused on integrating <strong>machine learning and statistical modeling</strong> to drive biomedical innovation.</p>
         <p>Email: <a href="mailto:karla.mangano@stud.plus.ac.at">karla.mangano@stud.plus.ac.at</a></p>
     </section>
 
     <section id="education">
         <h2>Education</h2>
         <ul>
-            <li><strong>Master of Medical Biology</strong> - Paris Lodron University, Salzburg (2022-Present)</li>
-            <li><strong>Bachelor of Science in Physiology & Neuroscience</strong> - University of Western Australia (2017-2020)</li>
+            <li><strong>Master of Medical Biology</strong> – Paris Lodron University, Salzburg (2022-Present)</li>
+            <li><strong>BSc in Physiology & Neuroscience</strong> – University of Western Australia (2017-2020)</li>
         </ul>
     </section>
 
     <section id="experience">
         <h2>Professional Experience</h2>
         <ul>
-            <li><strong>Microbiology Course Tutor</strong>, Paris Lodron University, Salzburg (2024)<br>Supervised and organized laboratory courses, prepared bacterial and cell culture materials.</li>
-            <li><strong>Team Leader</strong>, Vitolus GmbH, Munich (2021-2022)<br>Managed COVID-19 testing teams across medical facilities, ensuring compliance with hygiene standards.</li>
-            <li><strong>Logistics Coordinator</strong>, FedEx, Perth (2018-2021)<br>Data management, report generation, and freight coordination.</li>
+            <li><strong>Microbiology Course Tutor</strong>, Paris Lodron University, Salzburg (2024)</li>
+            <li><strong>Team Leader</strong>, Vitolus GmbH, Munich (2021-2022)</li>
+            <li><strong>Logistics Coordinator</strong>, FedEx, Perth (2018-2021)</li>
         </ul>
     </section>
 
     <section id="skills">
         <h2>Technical Skills</h2>
         <ul>
-            <li><strong>Programming & Data Science:</strong> Python, R, Bash, Statistical Modeling</li>
-            <li><strong>Laboratory Techniques:</strong> Flow Cytometry, ELISA, Western Blotting, PCR</li>
-            <li><strong>Cell & Microbiology:</strong> Bacterial and mammalian cell culture, histology, microscopy</li>
-            <li><strong>Data Analytics:</strong> Visualization, pipeline automation, data cleaning</li>
+            <li>Python, R, Bash, Statistical Modeling</li>
+            <li>Flow Cytometry, ELISA, Western Blotting, PCR</li>
+            <li>Bacterial/Mammalian Cell Culture, Microscopy, Histology</li>
+            <li>Data Visualization, Pipeline Automation</li>
         </ul>
     </section>
 
     <section id="research">
         <h2>Research & Internships</h2>
         <ul>
-            <li><strong>Bioinformatics Research Intern</strong>, Paris Lodron University (2023)<br>Analyzed immunological gene expression data in mouse skin using R.</li>
-            <li><strong>Microbiology Research Intern</strong>, Paris Lodron University (2024)<br>Investigated H. pylori virulence factors and optimized bacterial growth conditions.</li>
+            <li><strong>Bioinformatics Intern</strong>, Paris Lodron University (2023)</li>
+            <li><strong>Microbiology Intern</strong>, Paris Lodron University (2024)</li>
         </ul>
     </section>
 
     <section id="projects">
         <h2>Projects & Achievements</h2>
-        <p><strong>🏅 2nd Place - Broad Institute Machine Learning Challenge</strong> (2023)<br>Developed ML models to predict missing spatial transcriptomics data, ranking <strong>2nd out of 75 teams</strong> and winning $2,400.</p>
-        <p><strong>🔬 Knowledge-Primed Neural Networks (KPNN) Research</strong> <br>Investigating KPNN interpretability using scCRISPR screens.</p>
+        <p><strong>2nd Place, Broad Institute ML Challenge</strong> (2023)</p>
+        <p><strong>Research on Knowledge-Primed Neural Networks (KPNN)</strong> – Interpretability in scCRISPR screens.</p>
     </section>
 
     <section id="languages">
         <h2>Languages</h2>
         <ul>
-            <li>English (Fluent) 🇬🇧</li>
-            <li>German (Fluent) 🇩🇪</li>
+            <li>English (Fluent)</li>
+            <li>German (Fluent)</li>
         </ul>
     </section>
 
     <section id="publications">
         <h2>Publications</h2>
-        <ul>
-            <li>Coming soon...</li>
-        </ul>
+        <p>Coming soon...</p>
     </section>
 </body>
 </html>
