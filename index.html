@@ -1,173 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karla Mangano - Professional Portfolio</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7fa;
-            color: #2a2f36;
-            line-height: 1.7;
-        }
-        header {
-            background-color: #2f3e46;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-            z-index: 1000;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #4c9aff;
-        }
-        section {
-            padding: 50px 25px;
-            max-width: 800px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
-        }
-        h1, h2 {
-            color: #2f3e46;
-            border-bottom: 2px solid #ccd5df;
-            padding-bottom: 5px;
-        }
-        .profile-pic {
-            width: 180px;
-            border-radius: 50%;
-            border: 3px solid #2f3e46;
-            margin: 20px auto;
-            display: block;
-        }
-        a {
-            color: #4c9aff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .highlight-box {
-            background-color: #e8eff6;
-            padding: 15px;
-            border-radius: 6px;
-            text-align: center;
-            margin: 20px auto;
-            width: 80%;
-            border-left: 4px solid #4c9aff;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            section {
-                width: 90%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karla's Lab Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Patrick Hand', cursive;
+      background: url('https://i.imgur.com/7u1W9AB.jpg'); /* corkboard background */
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      font-size: 2.5rem;
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .note {
+      width: 250px;
+      height: auto;
+      background-color: #fffaa9;
+      padding: 20px;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+      transform: rotate(-2deg);
+      transition: transform 0.3s;
+      position: relative;
+    }
+
+    .note:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .note h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+
+    .note button {
+      background-color: #ffdf57;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .note-content {
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+      .note {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#languages">Languages</a></li>
-                <li><a href="#publications">Publications</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>Karla's Lab Book 🧫📓</header>
 
-    <section id="about">
-        <h1>Karla Mangano</h1>
-        <img src="profile.jpg" alt="Karla Mangano" class="profile-pic">
-        <p class="highlight-box">Currently pursuing a Master's in Medical Biology, blending practical laboratory experience with skills in bioinformatics, machine learning, and data visualization to uncover meaningful biological insights.</p>
-        <p>Email: <a href="mailto:karla.mangano@stud.plus.ac.at">karla.mangano@stud.plus.ac.at</a></p>
-    </section>
+  <div class="board">
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Master of Medical Biology</strong> – Paris Lodron University, Salzburg (2022-Present)</li>
-            <li><strong>BSc in Physiology & Neuroscience</strong> – University of Western Australia (2017-2020)</li>
-        </ul>
-    </section>
+    <div class="note" data-aos="fade-up">
+      <h3>🧬 Master's Thesis</h3>
+      <p>Interpreting Knowledge-Primed Neural Networks with scCRISPR</p>
+      <button onclick="toggleDetails('thesis')">Read More</button>
+      <div id="thesis" class="note-content hidden">
+        Exploring the link between neural network interpretability and biological ground truth from perturbation screens. Includes pathway enrichment, bias correction, and more.
+      </div>
+    </div>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <ul>
-            <li><strong>Microbiology Course Tutor</strong>, Paris Lodron University, Salzburg (2024)</li>
-            <li><strong>NGS Bioinformatics Tutor</strong>, Paris Lodron University, Salzburg (2024)</li>
-            <li><strong>Practical Bioinformatics Tutor</strong>, Paris Lodron University, Salzburg (2025)</li>
-            <li><strong>Team Leader</strong>, Vitolus GmbH, Munich (2021-2022)</li>
-            <li><strong>Logistics Coordinator</strong>, FedEx, Perth (2018-2021)</li>
-        </ul>
-    </section>
+    <div class="note" data-aos="fade-left">
+      <h3>💡 Project: FGSEA Analysis</h3>
+      <p>Gene set enrichment pipeline</p>
+      <button onclick="toggleDetails('fgsea')">Read More</button>
+      <div id="fgsea" class="note-content hidden">
+        Built a custom FGSEA workflow with ranked log2FC values to test transcription factor target enrichment across cell types.
+      </div>
+    </div>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Python, R, Bash, Statistical Modeling</li>
-            <li>Flow Cytometry, ELISA, Western Blotting, PCR</li>
-            <li>Bacterial/Mammalian Cell Culture, Microscopy, Histology</li>
-            <li>Data Visualization, Pipeline Automation, Unix-based Workflows</li>
-        </ul>
-    </section>
+    <div class="note" data-aos="fade-right">
+      <h3>👩‍🔬 Wet Lab Skills</h3>
+      <ul>
+        <li>PCR & Gel Electrophoresis</li>
+        <li>ELISA, Western Blot</li>
+        <li>Cell Culture</li>
+      </ul>
+    </div>
 
-    <section id="research">
-        <h2>Research & Internships</h2>
-        <ul>
-            <li><strong>Bioinformatics Intern</strong>, Paris Lodron University (2023)</li>
-            <li><strong>Microbiology Intern</strong>, Paris Lodron University (2024)</li>
-        </ul>
-    </section>
+    <div class="note" data-aos="zoom-in">
+      <h3>📈 Coding Tools</h3>
+      <ul>
+        <li>Python, R, Bash</li>
+        <li>Data Viz (matplotlib, seaborn)</li>
+        <li>Machine Learning pipelines</li>
+      </ul>
+    </div>
 
-    <section id="projects">
-        <h2>Projects & Achievements</h2>
-        <p><strong>2nd Place, Broad Institute ML Challenge</strong> (2023)</p>
-        <p><strong>Master's Thesis:</strong> Investigating the interpretability of Knowledge-Primed Neural Networks using scCRISPR screens.</p>
-    </section>
+    <div class="note" data-aos="flip-down">
+      <h3>📬 Contact</h3>
+      <p>Email: <a href="mailto:karla.mangano@stud.plus.ac.at">karla.mangano@stud.plus.ac.at</a></p>
+      <p><a href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a></p>
+      <p><a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">LinkedIn</a></p>
+    </div>
 
-    <section id="languages">
-        <h2>Languages</h2>
-        <ul>
-            <li>English (Fluent)</li>
-            <li>German (Fluent)</li>
-        </ul>
-    </section>
+  </div>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <p>Coming soon...</p>
-    </section>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleDetails(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle("hidden");
+    }
+  </script>
 </body>
+</html>
+
 </html>
