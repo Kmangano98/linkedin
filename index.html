@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Karla's Lab Book</title>
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Fonts & Animations -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
   <style>
     body {
       margin: 0;
-      font-family: 'Patrick Hand', cursive;
-      background: url('https://i.imgur.com/7u1W9AB.jpg'); /* corkboard background */
+      font-family: 'Poppins', sans-serif;
+      background: url('https://i.imgur.com/lb5C8l6.png'); /* lined paper background */
       background-size: cover;
-      min-height: 100vh;
+      background-attachment: fixed;
+      color: #2a2f36;
     }
 
     header {
       text-align: center;
       padding: 40px 20px 10px;
+      font-family: 'Patrick Hand', cursive;
       font-size: 2.5rem;
-      color: #333;
       background-color: rgba(255, 255, 255, 0.85);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
@@ -31,25 +35,26 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 40px 20px;
       gap: 30px;
+      padding: 40px 20px;
     }
 
     .note {
-      width: 250px;
-      height: auto;
-      background-color: #fffaa9;
+      width: 260px;
+      min-height: 160px;
+      background-color: #fff0f5;
       padding: 20px;
-      border: 2px solid #d4af37;
-      border-radius: 10px;
-      box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
-      transform: rotate(-2deg);
-      transition: transform 0.3s;
+      border: 2px solid #ffc0cb;
+      border-radius: 12px;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
       position: relative;
+      cursor: grab;
+      transition: transform 0.3s;
+      font-family: 'Patrick Hand', cursive;
     }
 
     .note:hover {
-      transform: rotate(0deg) scale(1.02);
+      transform: scale(1.03);
     }
 
     .note h3 {
@@ -57,8 +62,16 @@
       font-size: 1.2em;
     }
 
+    .note img.profile-pic {
+      width: 100px;
+      border-radius: 50%;
+      border: 3px solid #e17aa3;
+      display: block;
+      margin: 10px auto;
+    }
+
     .note button {
-      background-color: #ffdf57;
+      background-color: #ffb6c1;
       border: none;
       padding: 6px 12px;
       border-radius: 5px;
@@ -67,13 +80,13 @@
       margin-top: 10px;
     }
 
-    .hidden {
-      display: none;
+    .note-content {
+      font-size: 0.95em;
+      margin-top: 10px;
     }
 
-    .note-content {
-      margin-top: 10px;
-      font-size: 0.95em;
+    .hidden {
+      display: none;
     }
 
     @media (max-width: 768px) {
@@ -81,34 +94,55 @@
         width: 90%;
       }
     }
+
+    a {
+      color: #d65a9f;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
+
   <header>Karla's Lab Book 🧫📓</header>
 
   <div class="board">
 
+    <!-- Profile Sticky Note -->
     <div class="note" data-aos="fade-up">
-      <h3>🧬 Master's Thesis</h3>
+      <h3>👋 Hi, I'm Karla</h3>
+      <img src="profile.jpg" alt="Profile picture" class="profile-pic">
+      <p>Master's student in Medical Biology with a passion for bioinformatics, neural networks & real-world biology 🧬</p>
+      <p><strong>Email:</strong> <a href="mailto:karla.mangano@stud.plus.ac.at">karla.mangano@stud.plus.ac.at</a></p>
+    </div>
+
+    <!-- Thesis Note -->
+    <div class="note" data-aos="fade-left">
+      <h3>🧠 Master's Thesis</h3>
       <p>Interpreting Knowledge-Primed Neural Networks with scCRISPR</p>
       <button onclick="toggleDetails('thesis')">Read More</button>
       <div id="thesis" class="note-content hidden">
-        Exploring the link between neural network interpretability and biological ground truth from perturbation screens. Includes pathway enrichment, bias correction, and more.
+        Exploring the link between model interpretability and real perturbation effects. Includes pathway enrichment, bias correction, and benchmarking with expression data.
       </div>
     </div>
 
-    <div class="note" data-aos="fade-left">
-      <h3>💡 Project: FGSEA Analysis</h3>
-      <p>Gene set enrichment pipeline</p>
+    <!-- Project Note -->
+    <div class="note" data-aos="fade-right">
+      <h3>🧪 FGSEA Analysis</h3>
+      <p>Gene set enrichment workflow with log2FC rankings</p>
       <button onclick="toggleDetails('fgsea')">Read More</button>
       <div id="fgsea" class="note-content hidden">
-        Built a custom FGSEA workflow with ranked log2FC values to test transcription factor target enrichment across cell types.
+        Tested TF-target gene enrichment using perturbation data and custom rankings, evaluated against KPNN feature attribution.
       </div>
     </div>
 
-    <div class="note" data-aos="fade-right">
-      <h3>👩‍🔬 Wet Lab Skills</h3>
+    <!-- Lab Skills Note -->
+    <div class="note" data-aos="zoom-in">
+      <h3>🔬 Wet Lab Skills</h3>
       <ul>
         <li>PCR & Gel Electrophoresis</li>
         <li>ELISA, Western Blot</li>
@@ -116,8 +150,9 @@
       </ul>
     </div>
 
-    <div class="note" data-aos="zoom-in">
-      <h3>📈 Coding Tools</h3>
+    <!-- Coding Note -->
+    <div class="note" data-aos="flip-up">
+      <h3>💻 Coding Tools</h3>
       <ul>
         <li>Python, R, Bash</li>
         <li>Data Viz (matplotlib, seaborn)</li>
@@ -125,8 +160,9 @@
       </ul>
     </div>
 
-    <div class="note" data-aos="flip-down">
-      <h3>📬 Contact</h3>
+    <!-- Contact Note -->
+    <div class="note" data-aos="fade-up">
+      <h3>📬 Contact Me</h3>
       <p>Email: <a href="mailto:karla.mangano@stud.plus.ac.at">karla.mangano@stud.plus.ac.at</a></p>
       <p><a href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a></p>
       <p><a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">LinkedIn</a></p>
@@ -134,15 +170,48 @@
 
   </div>
 
+  <!-- AOS Animations -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <!-- Drag & Drop -->
+  <script>
+    const notes = document.querySelectorAll('.note');
+    notes.forEach(note => {
+      note.addEventListener('mousedown', (e) => {
+        note.style.position = 'absolute';
+        note.style.zIndex = 1000;
+
+        function moveAt(pageX, pageY) {
+          note.style.left = pageX - note.offsetWidth / 2 + 'px';
+          note.style.top = pageY - note.offsetHeight / 2 + 'px';
+        }
+
+        moveAt(e.pageX, e.pageY);
+
+        function onMouseMove(event) {
+          moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        note.onmouseup = function () {
+          document.removeEventListener('mousemove', onMouseMove);
+          note.onmouseup = null;
+        };
+      });
+
+      note.ondragstart = function () {
+        return false;
+      };
+    });
+
     function toggleDetails(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle("hidden");
+      document.getElementById(id).classList.toggle('hidden');
     }
   </script>
-</body>
-</html>
 
+</body>
 </html>
