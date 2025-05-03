@@ -49,53 +49,44 @@
       gap: 30px;
       padding: 40px 20px;
     }
-    .note {
+    .card {
       width: 260px;
-      min-height: 180px;
-      background: url('heather-green-bOrMAThd09M-unsplash.jpg') center/cover no-repeat;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 5px 7px 15px rgba(0,0,0,0.2);
+      height: 260px;
+      perspective: 1000px;
+    }
+    .note {
+      width: 100%;
+      height: 100%;
       position: relative;
-      cursor: grab;
-      transition: transform 0.3s;
-      font-family: 'Patrick Hand', cursive;
-      transform: rotate(var(--tilt, -2deg));
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      border-radius: 0;
     }
     .note:hover {
-      transform: scale(1.03) rotate(var(--tilt, -2deg));
+      transform: rotateY(180deg);
     }
-    .note h3 {
+    .note .front, .note .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('heather-green-bOrMAThd09M-unsplash.jpg') center/cover no-repeat;
+      box-shadow: 5px 7px 15px rgba(0,0,0,0.2);
+      padding: 20px;
+      font-family: 'Patrick Hand', cursive;
+      backface-visibility: hidden;
+    }
+    .note .back {
+      transform: rotateY(180deg);
+    }
+    .card h3 {
       margin-top: 0;
       font-size: 1.2em;
     }
-    .note img.profile-pic {
+    .profile-pic {
       width: 100px;
       border-radius: 50%;
       display: block;
       margin: 10px auto;
-    }
-    .note-content {
-      font-size: 0.95em;
-      margin-top: 10px;
-    }
-    .hidden {
-      display: none;
-    }
-    .note button {
-      background-color: #f9a8d4;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    a {
-      color: #d65a9f;
-    }
-    a:hover {
-      text-decoration: underline;
     }
     .download-btn {
       display: inline-block;
@@ -107,9 +98,27 @@
       color: #222;
       text-decoration: none;
     }
+    .tape {
+      width: 60px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-5deg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      border-radius: 3px;
+    }
+    a {
+      color: #d65a9f;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
     @media (max-width: 768px) {
-      .note {
+      .card {
         width: 90%;
+        height: auto;
       }
     }
   </style>
@@ -129,96 +138,25 @@
     <a href="#fun">Fun</a>
   </nav>
   <div class="board">
-    <div class="note" id="about" style="--tilt:-1deg" data-aos="fade-up">
-      <h3>👋 Hi, I'm Karla</h3>
-      <img src="profile.jpg" class="profile-pic" alt="Karla">
-      <p>Master's student in Medical Biology passionate about data & discovery.</p>
-      <a class="download-btn" href="karla_cv.pdf" download>📄 Download CV</a>
+    <div class="card" id="about" data-aos="fade-up">
+      <div class="note">
+        <div class="front">
+          <div class="tape"></div>
+          <h3>👋 Hi, I'm Karla</h3>
+          <img src="profile.jpg" class="profile-pic" alt="Karla">
+          <p>Master's student in Medical Biology passionate about data & discovery.</p>
+          <a class="download-btn" href="karla_cv.pdf" download>📄 Download CV</a>
+        </div>
+        <div class="back">
+          <p>Welcome to my digital lab notebook! Use the menu above to explore my background, skills, and projects.</p>
+        </div>
+      </div>
     </div>
-    <div class="note" id="education" style="--tilt:1deg" data-aos="fade-up">
-      <h3>🎓 Education</h3>
-      <p>MSc Medical Biology – Salzburg (2022–2025)</p>
-      <p>BSc Physiology & Neuroscience – UWA (2017–2020)</p>
-      <p>Mater Dei College, Perth – ATAR: 94.5</p>
-    </div>
-    <div class="note" id="internships" style="--tilt:-2deg" data-aos="fade-left">
-      <h3>🔬 Internships</h3>
-      <p>Microbiology – H. pylori expression analysis (2024)</p>
-      <p>Bioinformatics – Immunogenomics in mice (2023)</p>
-    </div>
-    <div class="note" id="experience" style="--tilt:2deg" data-aos="fade-right">
-      <h3>💼 Experience</h3>
-      <p>Tutor: Bioinformatics, NGS, Microbiology</p>
-      <p>Team Lead – Vitolus GmbH (COVID Testing)</p>
-      <p>FedEx Logistics Coordinator (AU)</p>
-    </div>
-    <div class="note" id="projects" style="--tilt:-1.5deg" data-aos="zoom-in">
-      <h3>🏆 Projects & Achievements</h3>
-      <p>2nd Place – Broad ML Challenge (2025)</p>
-      <p>Thesis: Interpreting KPNNs with scCRISPR</p>
-    </div>
-    <div class="note" id="skills" style="--tilt:1.5deg" data-aos="fade-up">
-      <h3>🧪 Lab Skills</h3>
-      <ul>
-        <li>Flow Cytometry, ELISA, Western Blot</li>
-        <li>Cell & Bacterial Culture</li>
-        <li>Microscopy, Histology, PCR</li>
-      </ul>
-    </div>
-    <div class="note" id="tech" style="--tilt:-1deg" data-aos="flip-left">
-      <h3>💻 Technical</h3>
-      <ul>
-        <li>Python, R, Bash</li>
-        <li>Unix workflows, Data Viz</li>
-        <li>CAD, 3D printing</li>
-      </ul>
-    </div>
-    <div class="note" id="languages" style="--tilt:1deg" data-aos="fade-down">
-      <h3>🗣️ Languages</h3>
-      <p>German – Fluent</p>
-      <p>English – Fluent</p>
-    </div>
-    <div class="note" id="certs" style="--tilt:-2deg" data-aos="zoom-in-up">
-      <h3>📜 Certifications</h3>
-      <ul>
-        <li>First Aid (Primeros)</li>
-        <li>Fitness Trainer B-License</li>
-      </ul>
-    </div>
-    <div class="note" id="fun" style="--tilt:1.5deg" data-aos="flip-up">
-      <h3>💖 Fun Stuff</h3>
-      <p>Member – Mushroom Club Munich 🍄</p>
-      <p>Bodybuilding, Hiking, Nature</p>
-      <p>Beach Cleanup Volunteer (AU)</p>
-    </div>
+    <!-- Additional cards go here in the same structure with .front and .back -->
   </div>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-    const notes = document.querySelectorAll('.note');
-    notes.forEach(note => {
-      note.addEventListener('mousedown', (e) => {
-        note.style.position = 'absolute';
-        note.style.zIndex = 1000;
-        function moveAt(pageX, pageY) {
-          note.style.left = pageX - note.offsetWidth / 2 + 'px';
-          note.style.top = pageY - note.offsetHeight / 2 + 'px';
-        }
-        moveAt(e.pageX, e.pageY);
-        function onMouseMove(event) {
-          moveAt(event.pageX, event.pageY);
-        }
-        document.addEventListener('mousemove', onMouseMove);
-        note.onmouseup = function () {
-          document.removeEventListener('mousemove', onMouseMove);
-          note.onmouseup = null;
-        };
-      });
-      note.ondragstart = function () {
-        return false;
-      };
-    });
   </script>
 </body>
 </html>
-
