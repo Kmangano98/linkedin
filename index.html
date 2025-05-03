@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Karla’s Lab Book</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karla's Lab Book</title>
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;500&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-
   <style>
     body {
       margin: 0;
@@ -15,19 +14,34 @@
       background-size: cover;
       background-attachment: fixed;
     }
-
     header {
       font-family: 'Patrick Hand', cursive;
       font-size: 2.5rem;
       text-align: center;
-      padding: 40px 20px 10px;
-      background-color: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 30px;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 999;
     }
-
+    nav {
+      background: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 10px;
+      position: sticky;
+      top: 90px;
+      z-index: 998;
+    }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #7b2cbf;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .board {
       display: flex;
       flex-wrap: wrap;
@@ -35,7 +49,6 @@
       gap: 30px;
       padding: 40px 20px;
     }
-
     .note {
       width: 260px;
       min-height: 180px;
@@ -49,33 +62,26 @@
       font-family: 'Patrick Hand', cursive;
       transform: rotate(var(--tilt, -2deg));
     }
-
     .note:hover {
       transform: scale(1.03) rotate(var(--tilt, -2deg));
     }
-
     .note h3 {
       margin-top: 0;
       font-size: 1.2em;
     }
-
     .note img.profile-pic {
       width: 100px;
       border-radius: 50%;
-      border: 3px solid #ffb6c1;
       display: block;
       margin: 10px auto;
     }
-
     .note-content {
       font-size: 0.95em;
       margin-top: 10px;
     }
-
     .hidden {
       display: none;
     }
-
     .note button {
       background-color: #f9a8d4;
       border: none;
@@ -85,16 +91,12 @@
       cursor: pointer;
       margin-top: 10px;
     }
-
     a {
       color: #d65a9f;
-      text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     .download-btn {
       display: inline-block;
       margin-top: 8px;
@@ -105,7 +107,6 @@
       color: #222;
       text-decoration: none;
     }
-
     @media (max-width: 768px) {
       .note {
         width: 90%;
@@ -113,114 +114,112 @@
     }
   </style>
 </head>
-
 <body>
-
-  <header>Karla’s Lab Book 🧫📓</header>
-
+  <header>Karla's Lab Book 🧫📓</header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#internships">Internships</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#tech">Tech</a>
+    <a href="#languages">Languages</a>
+    <a href="#certs">Certifications</a>
+    <a href="#fun">Fun</a>
+  </nav>
   <div class="board">
-
-    <!-- Profile Sticky -->
-    <div class="note" data-aos="fade-up" style="--tilt: -1deg;">
+    <div class="note" id="about" style="--tilt:-1deg" data-aos="fade-up">
       <h3>👋 Hi, I'm Karla</h3>
-      <img src="profile.jpg" alt="Profile picture" class="profile-pic">
-      <p>Master's student in Medical Biology with a passion for bioinformatics, neural networks & real-world biology 🧬</p>
-      <p>Email: <a href="mailto:karla.mangano@stud.plus.ac.at">karla.mangano@stud.plus.ac.at</a></p>
+      <img src="profile.jpg" class="profile-pic" alt="Karla">
+      <p>Master's student in Medical Biology passionate about data & discovery.</p>
       <a class="download-btn" href="karla_cv.pdf" download>📄 Download CV</a>
     </div>
-
-    <!-- Thesis Note -->
-    <div class="note" data-aos="fade-left" style="--tilt: 2deg;">
-      <h3>🧠 Master's Thesis</h3>
-      <p>Interpreting Knowledge-Primed Neural Networks with scCRISPR</p>
-      <button onclick="toggleDetails('thesis')">Read More</button>
-      <div id="thesis" class="note-content hidden">
-        Exploring the link between neural networks and real perturbation outcomes, using pathway enrichment, bias correction & biological validation.
-      </div>
+    <div class="note" id="education" style="--tilt:1deg" data-aos="fade-up">
+      <h3>🎓 Education</h3>
+      <p>MSc Medical Biology – Salzburg (2022–2025)</p>
+      <p>BSc Physiology & Neuroscience – UWA (2017–2020)</p>
+      <p>Mater Dei College, Perth – ATAR: 94.5</p>
     </div>
-
-    <!-- Project Note -->
-    <div class="note" data-aos="fade-right" style="--tilt: -3deg;">
-      <h3>🧪 FGSEA Analysis</h3>
-      <p>Gene set enrichment workflow using log2FC rankings</p>
-      <button onclick="toggleDetails('fgsea')">Read More</button>
-      <div id="fgsea" class="note-content hidden">
-        Designed a pipeline to rank TF-target gene enrichment with custom metrics. Compared against KPNN importance to validate predictions.
-      </div>
+    <div class="note" id="internships" style="--tilt:-2deg" data-aos="fade-left">
+      <h3>🔬 Internships</h3>
+      <p>Microbiology – H. pylori expression analysis (2024)</p>
+      <p>Bioinformatics – Immunogenomics in mice (2023)</p>
     </div>
-
-    <!-- Lab Skills -->
-    <div class="note" data-aos="zoom-in" style="--tilt: 1deg;">
-      <h3>🔬 Wet Lab Skills</h3>
+    <div class="note" id="experience" style="--tilt:2deg" data-aos="fade-right">
+      <h3>💼 Experience</h3>
+      <p>Tutor: Bioinformatics, NGS, Microbiology</p>
+      <p>Team Lead – Vitolus GmbH (COVID Testing)</p>
+      <p>FedEx Logistics Coordinator (AU)</p>
+    </div>
+    <div class="note" id="projects" style="--tilt:-1.5deg" data-aos="zoom-in">
+      <h3>🏆 Projects & Achievements</h3>
+      <p>2nd Place – Broad ML Challenge (2025)</p>
+      <p>Thesis: Interpreting KPNNs with scCRISPR</p>
+    </div>
+    <div class="note" id="skills" style="--tilt:1.5deg" data-aos="fade-up">
+      <h3>🧪 Lab Skills</h3>
       <ul>
-        <li>PCR & Gel Electrophoresis</li>
-        <li>ELISA, Western Blot</li>
-        <li>Cell Culture</li>
+        <li>Flow Cytometry, ELISA, Western Blot</li>
+        <li>Cell & Bacterial Culture</li>
+        <li>Microscopy, Histology, PCR</li>
       </ul>
     </div>
-
-    <!-- Coding Note -->
-    <div class="note" data-aos="flip-up" style="--tilt: -2deg;">
-      <h3>💻 Coding Tools</h3>
+    <div class="note" id="tech" style="--tilt:-1deg" data-aos="flip-left">
+      <h3>💻 Technical</h3>
       <ul>
         <li>Python, R, Bash</li>
-        <li>Data Viz (matplotlib, seaborn)</li>
-        <li>ML Pipelines, scRNA-seq</li>
+        <li>Unix workflows, Data Viz</li>
+        <li>CAD, 3D printing</li>
       </ul>
     </div>
-
-    <!-- Contact -->
-    <div class="note" data-aos="fade-up" style="--tilt: 1.5deg;">
-      <h3>📬 Contact</h3>
-      <p>Email: <a href="mailto:karla.mangano@stud.plus.ac.at">karla.mangano@stud.plus.ac.at</a></p>
-      <p><a href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a></p>
-      <p><a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">LinkedIn</a></p>
+    <div class="note" id="languages" style="--tilt:1deg" data-aos="fade-down">
+      <h3>🗣️ Languages</h3>
+      <p>German – Fluent</p>
+      <p>English – Fluent</p>
     </div>
-
+    <div class="note" id="certs" style="--tilt:-2deg" data-aos="zoom-in-up">
+      <h3>📜 Certifications</h3>
+      <ul>
+        <li>First Aid (Primeros)</li>
+        <li>Fitness Trainer B-License</li>
+        <li>Driver’s License – Class B</li>
+      </ul>
+    </div>
+    <div class="note" id="fun" style="--tilt:1.5deg" data-aos="flip-up">
+      <h3>💖 Fun Stuff</h3>
+      <p>Member – Mushroom Club Munich 🍄</p>
+      <p>Bodybuilding, Hiking, Nature</p>
+      <p>Beach Cleanup Volunteer (AU)</p>
+    </div>
   </div>
-
-  <!-- AOS Animations -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
-
-  <!-- Drag & Drop -->
-  <script>
     const notes = document.querySelectorAll('.note');
     notes.forEach(note => {
       note.addEventListener('mousedown', (e) => {
         note.style.position = 'absolute';
         note.style.zIndex = 1000;
-
         function moveAt(pageX, pageY) {
           note.style.left = pageX - note.offsetWidth / 2 + 'px';
           note.style.top = pageY - note.offsetHeight / 2 + 'px';
         }
-
         moveAt(e.pageX, e.pageY);
-
         function onMouseMove(event) {
           moveAt(event.pageX, event.pageY);
         }
-
         document.addEventListener('mousemove', onMouseMove);
-
         note.onmouseup = function () {
           document.removeEventListener('mousemove', onMouseMove);
           note.onmouseup = null;
         };
       });
-
       note.ondragstart = function () {
         return false;
       };
     });
-
-    function toggleDetails(id) {
-      document.getElementById(id).classList.toggle('hidden');
-    }
   </script>
-
 </body>
 </html>
+
