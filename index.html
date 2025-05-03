@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karla's Lab Book</title>
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Caveat&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <style>
     body {
@@ -15,56 +15,51 @@
       background-attachment: fixed;
     }
     header {
-      font-family: 'Patrick Hand', cursive;
-      font-size: 3rem;
+      font-family: 'Caveat', cursive;
+      font-size: 2.6rem;
       text-align: center;
-      padding: 40px 0;
-      color: #333;
+      padding: 30px 0;
+      color: #3e3e3e;
     }
     .board {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      padding: 40px 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 50px 20px;
     }
     .card {
       width: 100%;
-      height: 300px;
+      height: 280px;
       perspective: 1000px;
       transform: rotateZ(var(--rotate, 0deg));
+      margin-top: var(--offset, 0px);
     }
     .note {
       width: 100%;
       height: 100%;
       position: relative;
       transform-style: preserve-3d;
-      transition: transform 0.6s ease-in-out;
-      border-radius: 0;
-      animation: float 2s ease-in-out infinite alternate;
+      transition: box-shadow 0.3s ease, transform 0.3s ease-in-out;
+      border-radius: 8px;
+      background: var(--bg-image, url('heather-green-bOrMAThd09M-unsplash.jpg')) center/cover no-repeat;
+      box-shadow: 4px 6px 10px rgba(0,0,0,0.1);
     }
     .note:hover {
-      transform: rotateY(180deg) scale(1.03);
+      transform: translateY(-6px) scale(1.015);
+      box-shadow: 6px 10px 16px rgba(0,0,0,0.15);
     }
-    .note .front, .note .back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: var(--bg-image, url('heather-green-bOrMAThd09M-unsplash.jpg')) center/cover no-repeat;
-      box-shadow: 5px 7px 15px rgba(0,0,0,0.2);
+    .note .content {
       padding: 20px;
-      font-family: 'Patrick Hand', cursive;
-      backface-visibility: hidden;
-      border-radius: 6px;
-    }
-    .note .back {
-      transform: rotateY(180deg);
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      height: 100%;
     }
     .card h3 {
       margin-top: 0;
-      font-size: 1.2em;
+      font-size: 1.3rem;
     }
     .profile-pic {
-      width: 100px;
+      width: 90px;
       border-radius: 50%;
       display: block;
       margin: 10px auto;
@@ -72,33 +67,30 @@
     .download-btn {
       display: inline-block;
       margin-top: 8px;
-      background-color: #ffb6c1;
+      background-color: #f2b6c1;
       padding: 6px 10px;
       border-radius: 6px;
       font-weight: bold;
+      font-size: 0.9rem;
       color: #222;
       text-decoration: none;
     }
     .tape {
-      width: 60px;
-      height: 20px;
-      background: rgba(255, 255, 255, 0.7);
+      width: 40px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.5);
       position: absolute;
-      top: -10px;
+      top: -6px;
       left: 50%;
       transform: translateX(-50%) rotate(-5deg);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      border-radius: 3px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+      border-radius: 2px;
     }
     a {
-      color: #d65a9f;
+      color: #b25291;
     }
     a:hover {
       text-decoration: underline;
-    }
-    @keyframes float {
-      from { transform: translateY(0); }
-      to { transform: translateY(-6px); }
     }
     @media (max-width: 768px) {
       .card {
@@ -110,66 +102,98 @@
 <body>
   <header>Karla's Lab Book 🧫📓</header>
   <div class="board">
-    <div class="card" id="about" data-aos="fade-up" style="--rotate: -2deg">
+    <div class="card" id="about" data-aos="fade-up" style="--rotate: -1deg; --offset: 0px">
       <div class="note">
-        <div class="front">
-          <div class="tape"></div>
+        <div class="tape"></div>
+        <div class="content">
           <h3>👋 Hi, I'm Karla</h3>
           <img src="profile.jpg" class="profile-pic" alt="Karla">
           <p>Master's student in Medical Biology passionate about data & discovery.</p>
           <a class="download-btn" href="karla_cv.pdf" download>📄 Download CV</a>
         </div>
-        <div class="back">
-          <p>Welcome to my digital lab notebook! Use the sticky notes below to explore my background, skills, and projects.</p>
-        </div>
       </div>
     </div>
-    <div class="card" id="education" data-aos="fade-up" style="--rotate: 1deg">
+    <div class="card" id="education" data-aos="fade-up" style="--rotate: 1deg; --offset: 10px">
       <div class="note">
-        <div class="front">
-          <div class="tape"></div>
+        <div class="tape"></div>
+        <div class="content">
           <h3>🎓 Education</h3>
           <p>MSc Medical Biology<br>Paris Lodron University Salzburg<br>2022–2025</p>
-        </div>
-        <div class="back">
           <p>BSc Physiology & Neuroscience<br>University of Western Australia<br>2017–2020</p>
-          <p>High school: Mater Dei College<br>ATAR: 94.5</p>
         </div>
       </div>
     </div>
-    <div class="card" id="projects" data-aos="fade-up" style="--rotate: -3deg">
-      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
-        <div class="front">
-          <div class="tape"></div>
+    <div class="card" id="projects" data-aos="fade-up" style="--rotate: -2.5deg; --offset: 20px">
+      <div class="note" style="--bg-image: url('REPLACE_WITH_COLOR_IMAGE_1.jpg');">
+        <div class="tape"></div>
+        <div class="content">
           <h3>🏆 Projects</h3>
           <p>2nd Place – Broad ML Challenge (2025)</p>
-        </div>
-        <div class="back">
-          <p>Master's Thesis:<br>Interpreting Knowledge-Primed Neural Networks with scCRISPR.<br>Explores pathway enrichment, bias correction, and biological ground truth.</p>
+          <p>Thesis: Interpreting Knowledge-Primed Neural Networks with scCRISPR. Includes enrichment, bias correction, and interpretability analysis.</p>
         </div>
       </div>
     </div>
-    <div class="card" id="internships" data-aos="fade-up" style="--rotate: 2deg">
-      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
-        <div class="front">
-          <div class="tape"></div>
+    <div class="card" id="internships" data-aos="fade-up" style="--rotate: 1.5deg; --offset: 30px">
+      <div class="note" style="--bg-image: url('REPLACE_WITH_COLOR_IMAGE_2.jpg');">
+        <div class="tape"></div>
+        <div class="content">
           <h3>🧪 Internships</h3>
-          <p>H. pylori Microbiology<br>Bioinformatics Immunogenomics</p>
-        </div>
-        <div class="back">
-          <p>Microbiology: Expression analysis of H. pylori virulence genes (2024).<br>Bioinformatics: Analysis of immune responses in mouse models (2023).</p>
+          <p>Microbiology: H. pylori virulence gene expression (2024)<br>Bioinformatics: Immunogenomics in mice (2023)</p>
         </div>
       </div>
     </div>
-    <div class="card" id="experience" data-aos="fade-up" style="--rotate: -1.5deg">
-      <div class="note" style="--bg-image: url('heather-green-Ur8LHergUFY-unsplash.jpg');">
-        <div class="front">
-          <div class="tape"></div>
+    <div class="card" id="experience" data-aos="fade-up" style="--rotate: -1.8deg; --offset: 40px">
+      <div class="note" style="--bg-image: url('REPLACE_WITH_COLOR_IMAGE_3.jpg');">
+        <div class="tape"></div>
+        <div class="content">
           <h3>💼 Experience</h3>
-          <p>Bioinformatics Tutor<br>Team Leader – Vitolus GmbH</p>
+          <p>Bioinformatics, NGS & Microbiology Tutor (2024–2025)<br>Team Lead – Vitolus GmbH (COVID logistics)<br>FedEx Logistics Coordinator (AU)</p>
         </div>
-        <div class="back">
-          <p>Tutoring: Microbiology, Bioinformatics, NGS modules (2024–2025).<br>Team lead in COVID-testing logistics across Munich and Austria.</p>
+      </div>
+    </div>
+        <div class="card" id="skills" data-aos="fade-up" style="--rotate: 2deg; --offset: 50px">
+      <div class="note" style="--bg-image: url('heather-green-Ur8LHergUFY-unsplash.jpg');">
+        <div class="tape"></div>
+        <div class="content">
+          <h3>🧬 Lab Skills</h3>
+          <p>Flow Cytometry, ELISA, Western Blot<br>Microscopy, Histology, PCR<br>Cell & Bacterial Culture</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="tech" data-aos="fade-up" style="--rotate: -2deg; --offset: 60px">
+      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
+        <div class="tape"></div>
+        <div class="content">
+          <h3>💻 Technical</h3>
+          <p>Python, R, Bash<br>Unix workflows, Data Viz<br>CAD, 3D printing</p>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="languages" data-aos="fade-up" style="--rotate: 1deg; --offset: 70px">
+      <div class="note" style="--bg-image: url('heather-green-bOrMAThd09M-unsplash.jpg');">
+        <div class="tape"></div>
+        <div class="content">
+          <h3>🗣️ Languages</h3>
+          <p>German – Fluent<br>English – Fluent</p>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="certifications" data-aos="fade-up" style="--rotate: -1.5deg; --offset: 80px">
+      <div class="note" style="--bg-image: url('heather-green-Ur8LHergUFY-unsplash.jpg');">
+        <div class="tape"></div>
+        <div class="content">
+          <h3>📜 Certifications</h3>
+          <p>Biomedical Research Ethics<br>Laboratory Safety Training<br>Data Privacy Compliance</p>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="fun" data-aos="fade-up" style="--rotate: 2deg; --offset: 90px">
+      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
+        <div class="tape"></div>
+        <div class="content">
+          <h3>🌸 Just for Fun</h3>
+          <p>Love dogs & dog training<br>Mushroom foraging 🍄<br>Building cool websites like this one ✨</p>
         </div>
       </div>
     </div>
