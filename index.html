@@ -16,64 +16,45 @@
     }
     header {
       font-family: 'Patrick Hand', cursive;
-      font-size: 2.5rem;
+      font-size: 3rem;
       text-align: center;
-      padding: 30px;
-      background: rgba(255,255,255,0.9);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav {
-      background: rgba(255,255,255,0.8);
-      text-align: center;
-      padding: 10px;
-      position: sticky;
-      top: 90px;
-      z-index: 998;
-    }
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #7b2cbf;
-    }
-    nav a:hover {
-      text-decoration: underline;
+      padding: 40px 0;
+      color: #333;
     }
     .board {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
       padding: 40px 20px;
     }
     .card {
-      width: 260px;
-      height: 260px;
+      width: 100%;
+      height: 300px;
       perspective: 1000px;
+      transform: rotateZ(var(--rotate, 0deg));
     }
     .note {
       width: 100%;
       height: 100%;
       position: relative;
       transform-style: preserve-3d;
-      transition: transform 0.6s;
+      transition: transform 0.6s ease-in-out;
       border-radius: 0;
+      animation: float 2s ease-in-out infinite alternate;
     }
     .note:hover {
-      transform: rotateY(180deg);
+      transform: rotateY(180deg) scale(1.03);
     }
     .note .front, .note .back {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: url('heather-green-bOrMAThd09M-unsplash.jpg') center/cover no-repeat;
+      background: var(--bg-image, url('heather-green-bOrMAThd09M-unsplash.jpg')) center/cover no-repeat;
       box-shadow: 5px 7px 15px rgba(0,0,0,0.2);
       padding: 20px;
       font-family: 'Patrick Hand', cursive;
       backface-visibility: hidden;
+      border-radius: 6px;
     }
     .note .back {
       transform: rotateY(180deg);
@@ -115,9 +96,12 @@
     a:hover {
       text-decoration: underline;
     }
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-6px); }
+    }
     @media (max-width: 768px) {
       .card {
-        width: 90%;
         height: auto;
       }
     }
@@ -125,20 +109,8 @@
 </head>
 <body>
   <header>Karla's Lab Book 🧫📓</header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#internships">Internships</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#tech">Tech</a>
-    <a href="#languages">Languages</a>
-    <a href="#certs">Certifications</a>
-    <a href="#fun">Fun</a>
-  </nav>
   <div class="board">
-    <div class="card" id="about" data-aos="fade-up">
+    <div class="card" id="about" data-aos="fade-up" style="--rotate: -2deg">
       <div class="note">
         <div class="front">
           <div class="tape"></div>
@@ -148,35 +120,59 @@
           <a class="download-btn" href="karla_cv.pdf" download>📄 Download CV</a>
         </div>
         <div class="back">
-          <p>Welcome to my digital lab notebook! Use the menu above to explore my background, skills, and projects.</p>
+          <p>Welcome to my digital lab notebook! Use the sticky notes below to explore my background, skills, and projects.</p>
         </div>
       </div>
     </div>
-    <div class="card" id="education" data-aos="fade-up">
-  <div class="note">
-    <div class="front">
-      <div class="tape"></div>
-      <h3>🎓 Education</h3>
-      <p>MSc Medical Biology<br>Paris Lodron University Salzburg<br>2022–2025</p>
+    <div class="card" id="education" data-aos="fade-up" style="--rotate: 1deg">
+      <div class="note">
+        <div class="front">
+          <div class="tape"></div>
+          <h3>🎓 Education</h3>
+          <p>MSc Medical Biology<br>Paris Lodron University Salzburg<br>2022–2025</p>
+        </div>
+        <div class="back">
+          <p>BSc Physiology & Neuroscience<br>University of Western Australia<br>2017–2020</p>
+          <p>High school: Mater Dei College<br>ATAR: 94.5</p>
+        </div>
+      </div>
     </div>
-    <div class="back">
-      <p>BSc Physiology & Neuroscience<br>University of Western Australia<br>2017–2020</p>
-      <p>High school: Mater Dei College<br>ATAR: 94.5</p>
+    <div class="card" id="projects" data-aos="fade-up" style="--rotate: -3deg">
+      <div class="note" style="--bg-image: url('REPLACE_WITH_COLOR_IMAGE_1.jpg');">
+        <div class="front">
+          <div class="tape"></div>
+          <h3>🏆 Projects</h3>
+          <p>2nd Place – Broad ML Challenge (2025)</p>
+        </div>
+        <div class="back">
+          <p>Master's Thesis:<br>Interpreting Knowledge-Primed Neural Networks with scCRISPR.<br>Explores pathway enrichment, bias correction, and biological ground truth.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="card" id="projects" data-aos="fade-up">
-  <div class="note">
-    <div class="front">
-      <div class="tape"></div>
-      <h3>🏆 Projects</h3>
-      <p>2nd Place – Broad ML Challenge (2025)</p>
+    <div class="card" id="internships" data-aos="fade-up" style="--rotate: 2deg">
+      <div class="note" style="--bg-image: url('REPLACE_WITH_COLOR_IMAGE_2.jpg');">
+        <div class="front">
+          <div class="tape"></div>
+          <h3>🧪 Internships</h3>
+          <p>H. pylori Microbiology<br>Bioinformatics Immunogenomics</p>
+        </div>
+        <div class="back">
+          <p>Microbiology: Expression analysis of H. pylori virulence genes (2024).<br>Bioinformatics: Analysis of immune responses in mouse models (2023).</p>
+        </div>
+      </div>
     </div>
-    <div class="back">
-      <p>Master's Thesis:<br>Interpreting Knowledge-Primed Neural Networks with scCRISPR.<br>Explores pathway enrichment, bias correction, and biological ground truth.</p>
+    <div class="card" id="experience" data-aos="fade-up" style="--rotate: -1.5deg">
+      <div class="note" style="--bg-image: url('REPLACE_WITH_COLOR_IMAGE_3.jpg');">
+        <div class="front">
+          <div class="tape"></div>
+          <h3>💼 Experience</h3>
+          <p>Bioinformatics Tutor<br>Team Leader – Vitolus GmbH</p>
+        </div>
+        <div class="back">
+          <p>Tutoring: Microbiology, Bioinformatics, NGS modules (2024–2025).<br>Team lead in COVID-testing logistics across Munich and Austria.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </div>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
