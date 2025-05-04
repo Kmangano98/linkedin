@@ -97,6 +97,13 @@
       box-shadow: 0 1px 4px rgba(0,0,0,0.15);
       border-radius: 2px;
     }
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 60px;
+      margin-bottom: 40px;
+    }
     a {
       color: #b25291;
     }
@@ -113,113 +120,125 @@
 <body>
   <header>Karla's Lab Book 🧫📓</header>
   <div class="board">
-    <div class="card" id="about" data-aos="fade-up" style="--rotate: -1deg; --offset: 0px">
-      <div class="note">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>👋 Hi, I'm Karla</h3>
-          <img src="profile.jpg" class="profile-pic" alt="Karla">
-          <p>Master's student in Medical Biology passionate about data & discovery.</p>
-          <a class="download-btn" href="Lebenslauf - Karla Mangano.pdf" download>📄 Download CV</a>
+    <div class="row">
+      <div class="card" id="about" data-aos="fade-up" style="--rotate: -1deg; --offset: 0px">
+        <div class="note">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>👋 Hi, I'm Karla</h3>
+            <img src="profile.jpg" class="profile-pic" alt="Karla">
+            <p>Master's student in Medical Biology passionate about data & discovery.</p>
+            <a class="download-btn" href="Lebenslauf - Karla Mangano.pdf" download>📄 Download CV</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card" id="education" data-aos="fade-up" style="--rotate: 1deg; --offset: 10px">
-      <div class="note">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>🎓 Education</h3>
-          <p>MSc Medical Biology<br>Paris Lodron University Salzburg<br>2022–2025</p>
-          <p>BSc Physiology & Neuroscience<br>University of Western Australia<br>2017–2020</p>
-          <a class="read-more" href="education.html">Read more →</a>
+    <div class="row">
+      <div class="card" id="education" data-aos="fade-up" style="--rotate: 1deg; --offset: 10px">
+        <div class="note">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>🎓 Education</h3>
+            <p>MSc Medical Biology<br>Paris Lodron University Salzburg<br>2022–2025</p>
+            <p>BSc Physiology & Neuroscience<br>University of Western Australia<br>2017–2020</p>
+            <a class="read-more" href="education.html">Read more →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="projects" data-aos="fade-up" style="--rotate: -2.5deg; --offset: 20px">
+        <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>🏆 Projects</h3>
+            <p>2nd Place – Broad ML Challenge (2025)</p>
+            <p>Thesis: Interpreting Knowledge-Primed Neural Networks with scCRISPR. Includes enrichment, bias correction, and interpretability analysis.</p>
+            <a class="read-more" href="projects.html">Read more →</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card" id="projects" data-aos="fade-up" style="--rotate: -2.5deg; --offset: 20px">
-      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>🏆 Projects</h3>
-          <p>2nd Place – Broad ML Challenge (2025)</p>
-          <p>Thesis: Interpreting Knowledge-Primed Neural Networks with scCRISPR. Includes enrichment, bias correction, and interpretability analysis.</p>
-          <a class="read-more" href="projects.html">Read more →</a>
+    <div class="row">
+      <div class="card" id="internships" data-aos="fade-up" style="--rotate: 1.5deg; --offset: 30px">
+        <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>🧪 Internships</h3>
+            <p>Microbiology: H. pylori virulence gene expression (2024)<br>Bioinformatics: Immunogenomics in mice (2023)</p>
+            <a class="read-more" href="internships.html">Read more →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="experience" data-aos="fade-up" style="--rotate: -1.8deg; --offset: 40px">
+        <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>💼 Experience</h3>
+            <p>Bioinformatics, NGS & Microbiology Tutor (2024–2025)<br>Team Lead – Vitolus GmbH (COVID logistics)<br>FedEx Logistics Coordinator (AU)</p>
+            <a class="read-more" href="experience.html">Read more →</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card" id="internships" data-aos="fade-up" style="--rotate: 1.5deg; --offset: 30px">
-      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>🧪 Internships</h3>
-          <p>Microbiology: H. pylori virulence gene expression (2024)<br>Bioinformatics: Immunogenomics in mice (2023)</p>
-          <a class="read-more" href="internships.html">Read more →</a>
+    <div class="row">
+      <div class="card" id="skills" data-aos="fade-up" style="--rotate: 2deg; --offset: 50px">
+        <div class="note" style="--bg-image: url('heather-green-Ur8LHergUFY-unsplash.jpg');">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>🧬 Lab Skills</h3>
+            <p>Flow Cytometry, ELISA, Western Blot<br>Microscopy, Histology, PCR<br>Cell & Bacterial Culture</p>
+            <a class="read-more" href="skills.html">Read more →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="tech" data-aos="fade-up" style="--rotate: -2deg; --offset: 60px">
+        <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>💻 Technical</h3>
+            <p>Python, R, Bash<br>Unix workflows, Data Viz<br>CAD, 3D printing</p>
+            <a class="read-more" href="technical.html">Read more →</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card" id="experience" data-aos="fade-up" style="--rotate: -1.8deg; --offset: 40px">
-      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>💼 Experience</h3>
-          <p>Bioinformatics, NGS & Microbiology Tutor (2024–2025)<br>Team Lead – Vitolus GmbH (COVID logistics)<br>FedEx Logistics Coordinator (AU)</p>
-          <a class="read-more" href="experience.html">Read more →</a>
+    <div class="row">
+      <div class="card" id="languages" data-aos="fade-up" style="--rotate: 1deg; --offset: 70px">
+        <div class="note" style="--bg-image: url('heather-green-bOrMAThd09M-unsplash.jpg');">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>🗣️ Languages</h3>
+            <p>German – Fluent<br>English – Fluent</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="certifications" data-aos="fade-up" style="--rotate: -1.5deg; --offset: 80px">
+        <div class="note" style="--bg-image: url('heather-green-Ur8LHergUFY-unsplash.jpg');">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>📜 Certifications</h3>
+            <p>Biomedical Research Ethics<br>Laboratory Safety Training<br>Data Privacy Compliance</p>
+            <a class="read-more" href="certifications.html">Read more →</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card" id="skills" data-aos="fade-up" style="--rotate: 2deg; --offset: 50px">
-      <div class="note" style="--bg-image: url('heather-green-Ur8LHergUFY-unsplash.jpg');">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>🧬 Lab Skills</h3>
-          <p>Flow Cytometry, ELISA, Western Blot<br>Microscopy, Histology, PCR<br>Cell & Bacterial Culture</p>
-          <a class="read-more" href="skills.html">Read more →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="tech" data-aos="fade-up" style="--rotate: -2deg; --offset: 60px">
-      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>💻 Technical</h3>
-          <p>Python, R, Bash<br>Unix workflows, Data Viz<br>CAD, 3D printing</p>
-          <a class="read-more" href="technical.html">Read more →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="languages" data-aos="fade-up" style="--rotate: 1deg; --offset: 70px">
-      <div class="note" style="--bg-image: url('heather-green-bOrMAThd09M-unsplash.jpg');">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>🗣️ Languages</h3>
-          <p>German – Fluent<br>English – Fluent</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="certifications" data-aos="fade-up" style="--rotate: -1.5deg; --offset: 80px">
-      <div class="note" style="--bg-image: url('heather-green-Ur8LHergUFY-unsplash.jpg');">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>📜 Certifications</h3>
-          <p>Biomedical Research Ethics<br>Laboratory Safety Training<br>Data Privacy Compliance</p>
-          <a class="read-more" href="certifications.html">Read more →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="fun" data-aos="fade-up" style="--rotate: 2deg; --offset: 90px">
-      <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
-        <div class="tape"></div>
-        <div class="content">
-          <h3>🌸 Just for Fun</h3>
-          <p>Love dogs & dog training<br>Mushroom foraging 🍄<br>Building cool websites like this one ✨</p>
+    <div class="row">
+      <div class="card" id="fun" data-aos="fade-up" style="--rotate: 2deg; --offset: 90px">
+        <div class="note" style="--bg-image: url('heather-green-SzDrE3_msOs-unsplash.jpg');">
+          <div class="tape"></div>
+          <div class="content">
+            <h3>🌸 Just for Fun</h3>
+            <p>Love dogs & dog training<br>Mushroom foraging 🍄<br>Building cool websites like this one ✨</p>
+          </div>
         </div>
       </div>
     </div>
@@ -230,4 +249,5 @@
     AOS.init();
   </script>
 </body>
+
 
