@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses & Books – Karla's Lab Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Caveat&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Inter', sans-serif;
+      background: url('white_paper_background.jpg') repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #3e3e3e;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: url('lined_paper.jpg') center/cover no-repeat;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #b25291;
+      margin-top: 30px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    a.back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 6px 14px;
+      background-color: #ffdee9;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #3e3e3e;
+      text-decoration: none;
+      position: relative;
+    }
+
+    a.back-btn::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-5deg);
+      width: 50px;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 2px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Courses & Books</h1>
+
+    <h2>Learn Data Mining Through Excel</h2>
+    <p><strong>Author:</strong> Hong Zhou, University of Saint Joseph, USA</p>
+    <p><strong>Skills:</strong> Machine learning algorithms</p>
+    <p><a href="https://link.springer.com/book/10.1007/978-1-4842-9771-1" target="_blank">🔗 Link to the ebook</a></p>
+    <p>This ebook provided a hands-on approach to data mining by implementing algorithms manually in Excel, forcing me to break down each step and truly understand their mechanics. Unlike automated tools, Excel makes every calculation visible, reinforcing intuition for methods like linear and logistic regression, decision trees, neural networks, k-NN, Naïve Bayes, sentence sentiment analysis, and more.</p>
+
+    <a class="back-btn" href="index.html">← Back to Lab Book</a>
+  </div>
+</body>
+</html>
+
