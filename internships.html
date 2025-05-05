@@ -43,10 +43,17 @@
     }
 
     h2::before {
-      content: url('paper-clip.png');
+      content: "";
       position: absolute;
       left: 0;
-      top: 0;
+      top: 2px;
+      width: 26px;  /* Adjust width */
+      height: auto;
+      background-image: url('paper-clip.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: inline-block;
     }
 
     p {
