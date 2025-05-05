@@ -39,11 +39,15 @@
       padding-left: 40px;
     }
     h2::before {
-      content: url('paper-clip.png');
+      content: "";
+      background: url('paperclip.png') no-repeat center center;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
       position: absolute;
       left: 0;
-      top: -5px;
-      transform: rotate(-10deg);
+      top: 5px;
     }
     ul {
       padding-left: 20px;
