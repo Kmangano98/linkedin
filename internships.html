@@ -43,10 +43,15 @@
     }
 
     h2::before {
-      content: url('paper-clip.png'); /* Add your paperclip icon file here */
+      content: "";
+      background: url('paperclip.png') no-repeat center center;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
       position: absolute;
       left: 0;
-      top: 0;
+      top: 5px;
     }
 
     p {
