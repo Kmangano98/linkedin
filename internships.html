@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Internships – Karla's Lab Book</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Caveat&display=swap" rel="stylesheet">
   <style>
@@ -43,15 +43,10 @@
     }
 
     h2::before {
-      content: "";
-      background: url('paper-clip.png') no-repeat center center;
-      background-size: contain;
-      width: 24px;
-      height: 24px;
-      display: inline-block;
+      content: url('paperclip.png');
       position: absolute;
       left: 0;
-      top: 5px;
+      top: 0;
     }
 
     p {
@@ -59,17 +54,22 @@
       line-height: 1.8;
     }
 
-    .note-reflection {
-      color: crimson;
-      font-size: 1.2rem;
-      font-style: italic;
-      margin-top: -10px;
-      margin-bottom: 20px;
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      margin-right: 10px;
+      padding: 6px 14px;
+      background-color: #f2b6c1;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #222;
+      text-decoration: none;
     }
 
     a.back-btn {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 40px;
       padding: 6px 14px;
       background-color: #ffdee9;
       border-radius: 6px;
@@ -102,20 +102,23 @@
   <div class="container">
     <h1>🧪 Internships</h1>
 
-    <h2>Medical Microbiology Lab - 2024</h2>
+    <h2>2024 – Medical Microbiology Lab</h2>
     <p>
       In this internship, I investigated the virulence gene expression of <em>Helicobacter pylori</em> under different stress conditions. I worked with clinical isolates, conducted qPCR experiments, and helped analyze sequencing data to understand host-pathogen interactions. 
     </p>
-    <p class="note-reflection">"I loved the blend of hands-on work and critical thinking this project required."</p>
 
-    <h2>Bioinformatics Lab - 2023</h2>
+    <a class="download-btn" href="Lab Training Protocol - Karla Mangano .pdf" download>📄 Download Lab Protocol</a>
+
+    <h2>2023 – Bioinformatics Lab</h2>
     <p>
       Focused on immunogenomics in a mouse model of inflammation. I helped process single-cell RNA-seq data, performed differential gene expression analysis, and explored immune cell subtype-specific responses. This experience inspired my deeper dive into programming and data science.
     </p>
-    <p class="note-reflection">"This was the moment I realized how powerful coding can be for biological discovery."</p>
+
+    <a class="download-btn" href="Assessing HDAC2 Knockout Effects on CD4+ T Cell Signalling in Mouse Skin - Karla Mangano.pptx" download>📊 Download Presentation</a>
 
     <a class="back-btn" href="index.html">← Back to Lab Book</a>
   </div>
 </body>
 </html>
+
 
