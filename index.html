@@ -24,14 +24,13 @@
     .board {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-start;
       justify-content: center;
       gap: 40px 60px;
       padding: 50px 20px;
     }
     .card {
       width: 300px;
-      height: auto; /* ✅ Allow dynamic height */
+      height: auto;
       perspective: 1000px;
       transform: rotateZ(var(--rotate, 0deg));
       margin-top: var(--offset, 0px);
@@ -39,7 +38,6 @@
       animation: fadeIn 0.6s ease forwards;
       animation-delay: var(--delay, 0s);
     }
-
     @keyframes fadeIn {
       to {
         opacity: 1;
@@ -47,7 +45,7 @@
     }
     .note {
       width: 100%;
-      height: auto;
+      height: 100%;
       position: relative;
       transform-style: preserve-3d;
       transition: box-shadow 0.3s ease, transform 0.3s ease-in-out;
@@ -106,14 +104,6 @@
       transform: translateX(-50%) rotate(-5deg);
       box-shadow: 0 1px 4px rgba(0,0,0,0.15);
       border-radius: 2px;
-    }
-    .row {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: nowrap;
-      gap: 60px;
-      margin-bottom: 40px;
     }
     a {
       color: #b25291;
@@ -265,9 +255,10 @@
       </div>
     </div>
   </div>
-
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 </body>
+</html>
+
