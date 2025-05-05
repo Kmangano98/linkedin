@@ -24,6 +24,7 @@
       box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
       font-family: 'Caveat', cursive;
       font-size: 1.3rem;
+      position: relative;
     }
     h1 {
       font-size: 2.4rem;
@@ -42,44 +43,42 @@
     a:hover {
       text-decoration: underline;
     }
-    .back-wrapper {
-      position: relative;
+    .back-btn-wrapper {
+      position: absolute;
+      top: -25px;
+      left: 20px;
+    }
+    .back-btn {
       display: inline-block;
-      margin-top: 30px;
-    }
-    .back-button {
+      padding: 8px 14px;
       font-size: 1rem;
-      padding: 8px 16px;
-      background-color: #fcd6e1;
-      color: #333;
+      background-color: #ffdee9;
       border-radius: 6px;
+      color: #3e3e3e;
       text-decoration: none;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
       position: relative;
-      z-index: 2;
     }
-    .back-wrapper::before {
-      content: "";
+    .back-btn::before {
+      content: '';
       position: absolute;
       top: -10px;
       left: 50%;
-      transform: translateX(-50%) rotate(-4deg);
-      width: 60px;
-      height: 20px;
-      background: rgba(255,255,255,0.5);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transform: translateX(-50%) rotate(-5deg);
+      width: 50px;
+      height: 16px;
+      background: rgba(255, 255, 255, 0.7);
       border-radius: 3px;
-      z-index: 1;
-    }
-    .center {
-      text-align: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      z-index: -1;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="back-btn-wrapper">
+      <a class="back-btn" href="index.html">← Back to Lab Book</a>
+    </div>
     <h1>👩‍🔬 About Me</h1>
     <p>
       I'm Karla Mangano — a jack of all trades driven more than anything by a desire to learn and take on challenges. Whether it’s moving across the world, shifting disciplines, or building digital tools from scratch, I’ve always followed opportunities that stretch me. Programming was one of those challenges — and now one of my favorite parts of research.
@@ -88,7 +87,7 @@
       I’m currently pursuing a Master’s degree in Medical Biology at Paris Lodron University Salzburg, building on a BSc in Physiology and Neuroscience from the University of Western Australia. This foundation gives me a multidisciplinary lens on biological research.
     </p>
     <p>
-      My thesis focuses on making neural networks more interpretable through single-cell CRISPR perturbation data — a blend of computational modeling, genomics, and critical thinking. It's where my love for bioinformatics really took off.
+      My Master’s Thesis focuses on making neural networks more interpretable through single-cell CRISPR perturbation data — a blend of computational modeling, genomics, and critical thinking. It's where my love for bioinformatics really took off.
     </p>
     <p>
       Along the way, I’ve contributed to microbiology and immunogenomics research, worked as a tutor for next-gen sequencing and bioinformatics, and found joy in making science clearer and more accessible.
@@ -97,7 +96,7 @@
       Outside of the lab and code editor, you’ll find me mushroom foraging, training dogs, or designing playful, purposeful things like this digital lab book. I'm always looking for meaningful ways to apply what I learn to support scientific discovery and improve human health.
     </p>
     <p>
-      Feel free to <a href="mailto:karla.mangano@stud.plus.ac.at">get in touch</a>, <a href="Lebenslauf - Karla Mangano.pdf" download>download my CV</a>, or <a class="back-btn" href="index.html">← Back to Lab Book</a>.
+      Feel free to <a href="mailto:karla.mangano@stud.plus.ac.at">get in touch</a> or <a href="Lebenslauf - Karla Mangano.pdf" download>download my CV</a>.
     </p>
   </div>
 </body>
