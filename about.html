@@ -42,6 +42,40 @@
     a:hover {
       text-decoration: underline;
     }
+    .back-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 30px;
+    }
+    .back-button {
+      font-size: 1rem;
+      padding: 8px 16px;
+      background-color: #fcd6e1;
+      color: #333;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+    .back-wrapper::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-4deg);
+      width: 60px;
+      height: 20px;
+      background: rgba(255,255,255,0.5);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      border-radius: 3px;
+      z-index: 1;
+    }
+    .center {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -62,6 +96,11 @@
     <p>
       Feel free to <a href="mailto:karla.mangano@stud.plus.ac.at">get in touch</a> or <a href="Lebenslauf - Karla Mangano.pdf" download>download my CV</a>.
     </p>
+    <div class="center">
+      <div class="back-wrapper">
+        <a class="back-button" href="index.html">← Back to Lab Book</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
