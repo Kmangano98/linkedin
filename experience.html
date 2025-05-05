@@ -3,76 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experience – Karla's Lab Book</title>
+  <title>Work Experience – Karla's Lab Book</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Caveat&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      padding: 40px 20px;
       font-family: 'Inter', sans-serif;
-      background: url('olga-thelavart-vS3idIiYxX0-unsplash.jpg') repeat;
+      background: url('white_paper_background.jpg') repeat;
       background-size: cover;
       background-attachment: fixed;
+      color: #3e3e3e;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: url('lined_paper.jpg') center/cover no-repeat;
       padding: 40px;
-      color: #2b2b2b;
+      border-radius: 8px;
+      box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      position: relative;
     }
     h1 {
-      font-family: 'Caveat', cursive;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    .content-box {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      max-width: 800px;
-      margin: auto;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      text-align: center;
     }
     h2 {
-      font-family: 'Inter', sans-serif;
+      font-size: 1.6rem;
       color: #b25291;
-      margin-top: 20px;
+      margin-top: 30px;
     }
-    p, li {
+    p {
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 6px 14px;
+      background-color: #ffdee9;
+      border-radius: 6px;
+      font-weight: bold;
       font-size: 1rem;
-      line-height: 1.6;
-    }
-    a {
-      color: #b25291;
+      color: #3e3e3e;
       text-decoration: none;
+      position: relative;
     }
-    a:hover {
-      text-decoration: underline;
+    a.back-btn::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-5deg);
+      width: 50px;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 2px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <div class="content-box">
-    <h1>💼 Experience</h1>
+  <div class="container">
+    <h1>💼 Work Experience</h1>
 
-    <h2>Bioinformatics & NGS Tutor</h2>
-    <p><strong>Paris Lodron University of Salzburg</strong> (2024 – 2025)</p>
-    <ul>
-      <li>Led hands-on tutorials in NGS data analysis and pipeline automation</li>
-      <li>Developed educational content for microbiology and computational biology</li>
-    </ul>
+    <h2>Tutor – High Performance Computing & Scripting</h2>
+    <p><strong>University of Salzburg</strong> (Mar 2025 · 1 mo)<br>Guided biology students in Python and Bash for automation and analysis, troubleshooting code, and introducing Unix workflows.</p>
 
-    <h2>Team Leader – COVID Diagnostics</h2>
-    <p><strong>Vitolus GmbH, Munich</strong> (2021 – 2022)</p>
-    <ul>
-      <li>Coordinated mobile testing teams across Austria and Germany</li>
-      <li>Trained and supervised staff in high-throughput laboratory protocols</li>
-      <li>Managed logistics, staff scheduling, and reporting for pandemic testing</li>
-    </ul>
+    <h2>Tutor – NGS Bioinformatics</h2>
+    <p><strong>University of Salzburg</strong> (Nov 2024 · 1 mo)<br>Supported students with Linux commands, NGS workflows, alignment, variant calling, and SNP annotation.</p>
 
-    <h2>Logistics Coordinator</h2>
-    <p><strong>FedEx, Perth</strong> (2018 – 2021)</p>
-    <ul>
-      <li>Oversaw scheduling and compliance for international shipments</li>
-      <li>Worked cross-functionally with customs, clients, and couriers</li>
-      <li>Ensured cold chain protocols and urgent diagnostics were prioritized</li>
-    </ul>
+    <h2>Tutor – Microbiology</h2>
+    <p><strong>University of Salzburg</strong> (Feb–Mar 2024 · 2 mos)<br>Assisted students during hands-on lab training in microbial cultivation, staining, microscopy, and safety procedures.</p>
 
-    <p><a href="index.html">← Back to Lab Book</a></p>
+    <h2>Lab Intern – Microbiology</h2>
+    <p><strong>University of Salzburg</strong> (Jan–Feb 2024 · 2 mos)<br>Investigated H. pylori virulence factor expression in AGS cells using mammalian culture and Western blotting.</p>
+
+    <h2>Lab Intern – Computational Systems Biology</h2>
+    <p><strong>University of Salzburg</strong> (Oct–Nov 2023 · 2 mos)<br>Analyzed HDAC2 knockout effects in mouse skin using R to explore CD4+ T cell signaling alterations.</p>
+
+    <h2>Team Leader – Corona Testing</h2>
+    <p><strong>Vitolus GmbH</strong> (Apr 2021–Apr 2022 · 1 yr 1 mo)<br>Led mobile testing at hospitals, senior homes, and prisons. Oversaw team operations, logistics, and PCR/antigen testing setup across Germany.</p>
+
+    <a class="back-btn" href="index.html">← Back to Lab Book</a>
   </div>
 </body>
 </html>
+
