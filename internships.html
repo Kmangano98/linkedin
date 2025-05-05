@@ -2,70 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Internships – Karla's Lab Book</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Caveat&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      padding: 40px 20px;
       font-family: 'Inter', sans-serif;
-      background: url('olga-thelavart-vS3idIiYxX0-unsplash.jpg') repeat;
+      background: url('white_paper_background.jpg') repeat;
       background-size: cover;
       background-attachment: fixed;
-      padding: 40px;
-      color: #2b2b2b;
+      color: #3e3e3e;
     }
-    h1 {
-      font-family: 'Caveat', cursive;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    .content-box {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    .container {
       max-width: 800px;
-      margin: auto;
+      margin: 0 auto;
+      background: url('lined_paper.jpg') center/cover no-repeat;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      position: relative;
     }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
     h2 {
-      font-family: 'Inter', sans-serif;
+      font-size: 1.8rem;
       color: #b25291;
-      margin-top: 20px;
+      margin-top: 30px;
+      position: relative;
+      padding-left: 40px;
     }
-    p, li {
+
+    h2::before {
+      content: url('paperclip.png'); /* Add your paperclip icon file here */
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .note-reflection {
+      color: crimson;
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    a.back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 6px 14px;
+      background-color: #ffdee9;
+      border-radius: 6px;
+      font-weight: bold;
       font-size: 1rem;
-      line-height: 1.6;
-    }
-    a {
-      color: #b25291;
+      color: #3e3e3e;
       text-decoration: none;
+      position: relative;
     }
+
+    a.back-btn::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-5deg);
+      width: 50px;
+      height: 14px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 2px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
     a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="content-box">
+  <div class="container">
     <h1>🧪 Internships</h1>
 
-    <h2>Microbiology Internship</h2>
-    <p><strong>Paris Lodron University Salzburg</strong> (2024)</p>
-    <ul>
-      <li>Analyzed expression of H. pylori virulence genes under different environmental conditions</li>
-      <li>Gained experience in RNA extraction, cDNA synthesis, and qPCR quantification</li>
-      <li>Worked independently in a wet lab environment to evaluate pathogen behavior</li>
-    </ul>
+    <h2>2024 – Medical Microbiology Lab</h2>
+    <p>
+      In this internship, I investigated the virulence gene expression of <em>Helicobacter pylori</em> under different stress conditions. I worked with clinical isolates, conducted qPCR experiments, and helped analyze sequencing data to understand host-pathogen interactions. 
+    </p>
+    <p class="note-reflection">"I loved the blend of hands-on work and critical thinking this project required."</p>
 
-    <h2>Bioinformatics Internship</h2>
-    <p><strong>Paris Lodron University Salzburg</strong> (2023)</p>
-    <ul>
-      <li>Worked with single-cell RNA-seq data from immune cells in mouse models</li>
-      <li>Performed quality control, normalization, and dimensionality reduction (Seurat/Scanpy)</li>
-      <li>Contributed to differential expression and pathway enrichment analysis</li>
-    </ul>
+    <h2>2023 – Bioinformatics Lab</h2>
+    <p>
+      Focused on immunogenomics in a mouse model of inflammation. I helped process single-cell RNA-seq data, performed differential gene expression analysis, and explored immune cell subtype-specific responses. This experience inspired my deeper dive into programming and data science.
+    </p>
+    <p class="note-reflection">"This was the moment I realized how powerful coding can be for biological discovery."</p>
 
-    <p><a href="index.html">← Back to Lab Book</a></p>
+    <a class="back-btn" href="index.html">← Back to Lab Book</a>
   </div>
 </body>
 </html>
+
